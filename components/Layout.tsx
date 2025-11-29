@@ -31,7 +31,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Hidden Full Report Container for PDF Generation */}
       {/* We use height: 0 and overflow: hidden to hide it from view, but keep it in the DOM flow so html2canvas can capture it. 
           Off-screen positioning (left: -10000px) causes blank PDFs with some renderers. */}
-      <div style={{ height: 0, overflow: 'hidden' }}>
+      <div
+        aria-hidden="true"
+        className="fixed top-0 left-0 opacity-0 pointer-events-none"
+        style={{ zIndex: -10 }}
+      >
         <div id="full-report-print-container" style={{ width: '1100px', backgroundColor: 'white' }}>
           {currentReport && <FullReport data={currentReport} />}
         </div>
