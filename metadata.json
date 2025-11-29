@@ -1,0 +1,7 @@
+{
+  "name": "Pretty Good Pitch - Solution",
+  "description": "AI-powered sales intelligence platform generating deep-dive reports, personas, and competitive analysis.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
